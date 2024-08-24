@@ -1,0 +1,16 @@
+{
+  "name": "zenn",
+  "version": "1.0.0",
+  "description": "このリポジトリはZennのコンテンツを管理するためのリポジトリです。",
+  "main": "index.js",
+  "scripts": {
+    "preview": "zenn preview",
+    "new:article": "zenn new:article --published false"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "zenn-cli": "^0.1.155"
+  }
+}
