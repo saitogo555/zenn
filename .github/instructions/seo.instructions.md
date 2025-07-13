@@ -1,5 +1,5 @@
 ---
-applyTo: "**/*.md"
+applyTo: "articles/**/*.md"
 ---
 
 # Copilot 向け執筆ガイド：Zenn で最大リーチ記事作成のための指示
