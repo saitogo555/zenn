@@ -1,0 +1,136 @@
+---
+title: "環境構築"
+---
+
+## この章のゴール
+
+この章では、Reactの開発に必要なNode.jsとnpmのインストール方法を学びます。
+自分のPCに開発環境を整え、Reactプロジェクトを作成できる状態にすることがゴールです。
+
+## Node.jsとは
+
+![Node.jsロゴ](/images/bb6718046a5840/nodejs-logo-dark.webp)
+
+Node.jsは、JavaScriptをサーバーサイドで実行できるようにするランタイム環境です。
+もともとWebブラウザ上で動作していたJavaScriptを、サーバーやPC上でも動かせるようにしたことで、フロントエンド・バックエンドの両方で同じ言語を使った開発が可能になりました。
+
+Node.jsには「npm（Node Package Manager）」というパッケージ管理ツールが付属しており、Reactをはじめとする多くのライブラリやツールを簡単にインストールできます。
+
+## npmとは
+
+![npmロゴ](/images/bb6718046a5840/npm-logo.webp)
+
+npm（Node Package Manager）は、Node.jsに標準で付属しているパッケージ管理ツールです。npmを使うことで、Reactやその他のライブラリ・ツールを簡単にインストール・管理できます。
+
+例えば、Reactをインストールする場合は以下のようなコマンドを使います。
+
+```sh
+npm install react
+```
+
+npmは、プロジェクトごとに依存関係を管理するための`package.json`ファイルを作成し、必要なパッケージを自動的にダウンロードしてくれます。
+
+:::details package.json
+
+`dependencies`がアプリを動作させるために必要なパッケージ一覧です。
+`devDependencies`が開発時に必要なパッケージ一覧です
+
+```json:package.json
+{
+  "name": "react",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@headlessui/react": "^2.2.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.25.0",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-react": "^4.4.1",
+    "eslint": "^9.25.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^16.0.0",
+    "vite": "^6.3.5"
+  }
+}
+```
+:::
+
+> **ポイント:**  
+> npmは世界中の開発者が作成したパッケージを共有する巨大なリポジトリ（[npm公式サイト](https://www.npmjs.com/)）と連携しています。  
+> 必要なライブラリを検索して、すぐに導入できるのが特徴です。
+
+## セットアップ手順
+
+### Windows
+
+1. **インストーラーのダウンロード**
+   - [Node.js公式ダウンロードページ](https://nodejs.org/ja/download/)にアクセスします。
+   - 「LTS（推奨版）」を選択してください。
+   ![Node.jsダウンロードオプション](/images/bb6718046a5840/nodejs-download-options.webp)
+   ![Node.jsダウンロードボタン](/images/bb6718046a5840/nodejs-download-button.webp =800x)
+
+2. **インストーラーの実行**
+   - ダウンロードしたインストーラー（例: `node-vxx.x.x-x64.msi`）をダブルクリックして実行します。
+   - 画面の指示に従い、「Next」や「同意する」を選択して進めます。
+
+3. **インストール完了の確認**
+   - インストールが完了したら、コマンドプロンプトを開きます。
+   - 以下のコマンドでバージョンを確認します。
+
+   ```sh
+   node -v
+   npm -v
+   ```
+
+   - 正常にバージョンが表示されればセットアップ完了です。
+
+#### 参考画像
+
+（例: インストーラーの画面やバージョン確認のコマンドプロンプトの画像をここに挿入）
+
+### Linux
+
+Linuxでは、パッケージマネージャーを使ってNode.jsとnpmをインストールします。
+ここではUbuntuを例に説明します。
+
+1. **リポジトリの追加とインストール**
+   - ターミナルを開き、以下のコマンドを順番に実行します。
+
+   ```sh
+   sudo apt update
+   sudo apt install -y nodejs npm
+   ```
+
+2. **インストール完了の確認**
+   - 以下のコマンドでバージョンを確認します。
+
+   ```sh
+   node -v
+   npm -v
+   ```
+   - バージョンが表示されればセットアップ完了です。
+
+#### 参考画像
+（例: ターミナルでのインストールやバージョン確認の画像をここに挿入）
+
+#### 補足: より新しいバージョンを使いたい場合
+Node.jsの公式サイトや[nvm（Node Version Manager）](https://github.com/nvm-sh/nvm)を使うことで、複数バージョンの切り替えや最新バージョンのインストールも可能です。開発環境に応じて活用してください。
+
+---
+
+これで、Node.jsとnpmのセットアップが完了しました。次のステップに進みましょう。
+
+
