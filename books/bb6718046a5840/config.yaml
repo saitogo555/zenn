@@ -1,0 +1,9 @@
+title: "Re:ゼロから始めるReact超入門ガイド"
+summary: "Reactの各機能を1つずつ丁寧に学び、練習問題で理解を深める実践的なガイド。Hooksや状態管理、コンポーネントなど、Reactの機能を段階的に学ぶことができます。"
+topics: [
+  "react",
+]
+published: false
+price: 0 # 有料の場合200〜5000
+# 本に含めるチャプターを順番に並べましょう
+chapters:
