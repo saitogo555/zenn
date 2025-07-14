@@ -79,12 +79,37 @@ npmは、プロジェクトごとに依存関係を管理するための`package
 1. **インストーラーのダウンロード**
    - [Node.js公式ダウンロードページ](https://nodejs.org/ja/download/)にアクセスします。
    - 「LTS（推奨版）」を選択してください。
-   ![Node.jsダウンロードオプション](/images/bb6718046a5840/nodejs-download-options.webp)
+
+   ![Node.jsダウンロードオプション](/images/bb6718046a5840/nodejs-download-options.webp =800x)
    ![Node.jsダウンロードボタン](/images/bb6718046a5840/nodejs-download-button.webp =800x)
 
 2. **インストーラーの実行**
    - ダウンロードしたインストーラー（例: `node-vxx.x.x-x64.msi`）をダブルクリックして実行します。
    - 画面の指示に従い、「Next」や「同意する」を選択して進めます。
+
+   ![Node.jsインストール画面](/images/bb6718046a5840/nodejs-install-win-1.webp =800x)
+   *Nextをクリック*
+
+   ![Node.jsインストール画面](/images/bb6718046a5840/nodejs-install-win-2.webp =800x)
+   *「I accept the terms in the License Agreement」にチェックを入れてNextをクリック*
+
+   ![Node.jsインストール画面](/images/bb6718046a5840/nodejs-install-win-3.webp =800x)
+   *Nextをクリック*
+
+   ![Node.jsインストール画面](/images/bb6718046a5840/nodejs-install-win-4.webp =800x)
+   *Nextをクリック*
+
+   ![Node.jsインストール画面](/images/bb6718046a5840/nodejs-install-win-5.webp =800x)
+   *Nextをクリック*
+
+   ![Node.jsインストール画面](/images/bb6718046a5840/nodejs-install-win-6.webp =800x)
+   *Installをクリック*
+
+   ![Node.jsインストール画面](/images/bb6718046a5840/nodejs-install-win-7.webp =800x)
+   *進捗バーが100%になるまで待機*
+
+   ![Node.jsインストール画面](/images/bb6718046a5840/nodejs-install-win-8.webp =800x)
+   *インストールが完了したのでFinishをクリック*
 
 3. **インストール完了の確認**
    - インストールが完了したら、コマンドプロンプトを開きます。
@@ -97,9 +122,8 @@ npmは、プロジェクトごとに依存関係を管理するための`package
 
    - 正常にバージョンが表示されればセットアップ完了です。
 
-#### 参考画像
-
-（例: インストーラーの画面やバージョン確認のコマンドプロンプトの画像をここに挿入）
+   ![nodejsのバージョン確認](/images/bb6718046a5840/nodejs-version-check.webp =800x)
+   ![npmのバージョン確認](/images/bb6718046a5840/npm-version-check.webp =800x)
 
 ### Linux
 
