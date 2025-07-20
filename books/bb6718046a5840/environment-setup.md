@@ -16,6 +16,9 @@ Node.jsは、JavaScriptをサーバーサイドで実行できるようにする
 
 Node.jsには「npm（Node Package Manager）」というパッケージ管理ツールが付属しており、Reactをはじめとする多くのライブラリやツールを簡単にインストールできます。
 
+> **初心者向けポイント:**
+> Node.jsは「JavaScriptをパソコンやサーバーで動かすための仕組み」です。npmは「便利な道具箱から必要な道具（ライブラリ）を取り出すための仕組み」と考えると分かりやすいです。
+
 ## npmとは
 
 ![npmロゴ](/images/bb6718046a5840/npm-logo.webp)
@@ -30,48 +33,8 @@ npm install react
 
 npmは、プロジェクトごとに依存関係を管理するための`package.json`ファイルを作成し、必要なパッケージを自動的にダウンロードしてくれます。
 
-:::details package.json
-
-`dependencies`がアプリを動作させるために必要なパッケージ一覧です。
-`devDependencies`が開発時に必要なパッケージ一覧です
-
-```json:package.json
-{
-  "name": "react",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "@headlessui/react": "^2.2.4",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-router-dom": "^7.6.2"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.25.0",
-    "@types/react": "^19.1.2",
-    "@types/react-dom": "^19.1.2",
-    "@vitejs/plugin-react": "^4.4.1",
-    "eslint": "^9.25.0",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.19",
-    "globals": "^16.0.0",
-    "vite": "^6.3.5"
-  }
-}
-```
-
-:::
-
-> **ポイント:**  
-> npmは世界中の開発者が作成したパッケージを共有する巨大なリポジトリ（[npm公式サイト](https://www.npmjs.com/)）と連携しています。  
-> 必要なライブラリを検索して、すぐに導入できるのが特徴です。
+> **npmの役割:**
+> npmは「必要な部品（ライブラリ）を自動で集めてくれる便利な管理人」です。あなたが「Reactを使いたい」と伝えると、npmが必要なファイルをダウンロードしてくれます。
 
 ## セットアップ手順
 
@@ -80,13 +43,14 @@ npmは、プロジェクトごとに依存関係を管理するための`package
 1. **インストーラーのダウンロード**
    - [Node.js公式ダウンロードページ](https://nodejs.org/ja/download/)にアクセスします。
    - 「LTS（推奨版）」を選択してください。
+   - 「Windowsインストーラー(.msi)」をクリックしてインストーラーをダウンロードします。
 
    ![Node.jsダウンロードオプション](/images/bb6718046a5840/nodejs-download-options.webp =800x)
    ![Node.jsダウンロードボタン](/images/bb6718046a5840/nodejs-download-button.webp =800x)
 
 2. **インストーラーの実行**
    - ダウンロードしたインストーラー（例: `node-vxx.x.x-x64.msi`）をダブルクリックして実行します。
-   - 画面の指示に従い、「Next」や「同意する」を選択して進めます。
+   - 画面の指示に従い、「Next」や「Install」を選択して進めます。
 
    ![Node.jsインストール画面](/images/bb6718046a5840/nodejs-install-win-1.webp =800x)
    *Nextをクリック*
@@ -113,7 +77,7 @@ npmは、プロジェクトごとに依存関係を管理するための`package
    *インストールが完了したのでFinishをクリック*
 
 3. **インストール完了の確認**
-   - インストールが完了したら、コマンドプロンプトを開きます。
+   - インストールが完了したら、ターミナル(コマンドプロンプト)を開きます。
    - 以下のコマンドでバージョンを確認します。
 
    ```sh
@@ -121,10 +85,10 @@ npmは、プロジェクトごとに依存関係を管理するための`package
    npm -v
    ```
 
-   - 正常にバージョンが表示されればセットアップ完了です。
+   ![Node.jsバージョン確認](/images/bb6718046a5840/nodejs-version-check.webp =800x)
+   ![npmバージョン確認](/images/bb6718046a5840/npm-version-check.webp =800x)
 
-   ![nodejsのバージョン確認](/images/bb6718046a5840/nodejs-version-check.webp =800x)
-   ![npmのバージョン確認](/images/bb6718046a5840/npm-version-check.webp =800x)
+   - 正常にバージョンが表示されればセットアップ完了です。
 
 ### Linux
 
@@ -153,7 +117,18 @@ Linuxでは、Node.jsバージョンマネージャー「n」を使うことで�
    ```
 
    - インストール中に「n」本体と最新のLTS版Node.jsが自動でセットアップされます。
-   - インストールが完了したら、**新しいターミナルを開く**か、`source ~/.bashrc`や`source ~/.zshrc`などでシェル設定を再読み込みしてください。
+   - インストールが完了したら、**新しいターミナルを開く**か、下記のコマンドでシェル設定を再読み込みしてください。
+      - bashの場合:
+
+         ```bash
+         source ~/.bashrc
+         ```
+
+      - zshの場合:
+
+         ```bash
+         source ~/.zshrc
+         ```
 
 3. **Node.jsとnpmのバージョン確認**
 
@@ -182,7 +157,7 @@ n 20.12.2     # バージョンを指定してインストール
 
 :::
 
-> **ポイント:** nの詳しい使い方は公式の[n-installリポジトリ](https://github.com/mklement0/n-install)も参考にしてください。
+> **ポイント:** nの詳しい使い方は公式の[n-installリポジトリ](https://github.com/mklement0/n-install)を参照してください。
 
 ---
 
