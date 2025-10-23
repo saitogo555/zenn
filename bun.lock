@@ -3,12 +3,17 @@
   "workspaces": {
     "": {
       "name": "zenn",
+      "dependencies": {
+        "install": "^0.13.0",
+      },
       "devDependencies": {
-        "zenn-cli": "^0.2.3",
+        "zenn-cli": "^0.2.7",
       },
     },
   },
   "packages": {
-    "zenn-cli": ["zenn-cli@0.2.3", "", { "bin": { "zenn": "dist/server/zenn.js" } }, "sha512-ghYpg2foOeFExvtWKDFSjCsq+utYf84jApw37Wli1MnSAE1la40GZ47kXQDQKeh/1LV2AT0LDMYWbmE64Z4ZSg=="],
+    "install": ["install@0.13.0", "", {}, "sha512-zDml/jzr2PKU9I8J/xyZBQn8rPCAY//UOYNmR01XwNwyfhEWObo2SWfSl1+0tm1u6PhxLwDnfsT/6jB7OUxqFA=="],
+
+    "zenn-cli": ["zenn-cli@0.2.7", "", { "bin": { "zenn": "dist/server/zenn.js" } }, "sha512-IUR1RSUHOPpVoT5IBmINZQrbzpHwHYmmlnCnOjsqFt6tUpgNJFxMc91iUpeqrIbhvHQ5AAsy+TqXEEsMhs3dlA=="],
   }
 }
