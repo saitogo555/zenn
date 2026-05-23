@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "zenn-cli": "^0.4.7"
+    "zenn-cli": "^0.4.8"
   },
   "dependencies": {
     "install": "^0.13.0"

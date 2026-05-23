@@ -37,6 +37,6 @@
 
     "wsl-utils": ["wsl-utils@0.1.0", "", { "dependencies": { "is-wsl": "^3.1.0" } }, "sha512-h3Fbisa2nKGPxCpm89Hk33lBLsnaGBvctQopaBSOW/uIs6FTe1ATyAnKFJrzVs9vpGdsTe73WF3V4lIsk4Gacw=="],
 
-    "zenn-cli": ["zenn-cli@0.4.7", "", { "dependencies": { "open": "^10.2.0", "package-manager-detector": "^1.6.0" }, "bin": { "zenn": "dist/server/zenn.js" } }, "sha512-PkCvxOmP5bvSRx+cGFaXBkOABUez0XVioq91X39oziUppwDPFiT47qlNPX3In8W0/ySASq0ur49TkOTtv5fiIw=="],
+    "zenn-cli": ["zenn-cli@0.4.8", "", { "dependencies": { "open": "^10.2.0", "package-manager-detector": "^1.6.0" }, "bin": { "zenn": "dist/server/zenn.js" } }, "sha512-DIJv1udDCyHd6AqoBaQDjTMs/3fo1KUCpumgyy/X8Yt1SKB/egLmhhNmePGukkIhUZDld1+RLoMWOEBky6njwg=="],
   }
 }
